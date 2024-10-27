@@ -7,7 +7,7 @@ from imgurpython import ImgurClient
 
 # Variables
 now = datetime.now()
-client_id = '8622d53c34303f5'
+client_id = ''
 
 # Classes
 class imageUtil:
