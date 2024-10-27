@@ -36,7 +36,7 @@ class arrests(commands.Cog):
             print(f"{ctx.author} attempted to use '/logarrest' (ERROR: NO PERMISSION)")
 
             # Command Log
-            commandlog = self.bot.get_channel(1294458506099032164)
+            commandlog = self.bot.get_channel()
             
             embed = discord.Embed(
                 title = f"{ctx.author}: /logarrest",
@@ -96,7 +96,7 @@ class arrests(commands.Cog):
         embed.set_image(url=url)
 
         # Log Channel
-        logChannel = self.bot.get_channel(1294242787310702622)
+        logChannel = self.bot.get_channel()
 
         # Respond And Get Message ID of the Embed Message
         logMessage = await logChannel.send(f"{ctx.author.mention}", embed=embed)
@@ -153,7 +153,7 @@ class records(commands.Cog):
             print(f"{ctx.author} attempted to use '/findrecord' (ERROR: NO PERMISSION)")
 
             # Command Log
-            commandlog = self.bot.get_channel(1294458506099032164)
+            commandlog = self.bot.get_channel()
             
             embed = discord.Embed(
                 title = f"{ctx.author}: /findrecord",
@@ -208,7 +208,7 @@ class records(commands.Cog):
             print("Mugshot Success")
         
         # Log Command
-        commandlog = self.bot.get_channel(1294458506099032164)
+        commandlog = self.bot.get_channel()
             
         embed2 = discord.Embed(
             title = f"{ctx.author}: /findrecord",
