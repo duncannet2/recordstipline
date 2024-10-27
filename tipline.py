@@ -12,7 +12,7 @@ class tiplineModal(discord.ui.Modal):
     
     async def callback(self, interaction: discord.Interaction):
         embed = discord.Embed(title=self.children[0].value, description=self.children[1].value)
-        channel = self.bot.get_channel(1294478479383072860)
+        channel = self.bot.get_channel()
         await channel.send(embed=embed)
         await interaction.response.send_message("You have submitted a tip successfully", ephemeral=True)
 
@@ -46,7 +46,7 @@ class tipline(commands.Cog):
             print(f"{ctx.author} attempted to use '/tipline' (ERROR: NO PERMISSION)")
 
             # Command Log
-            commandlog = self.bot.get_channel(1294458506099032164)
+            commandlog = self.bot.get_channel()
             
             embed = discord.Embed(
                 title = f"{ctx.author}: /tipline",
@@ -63,7 +63,7 @@ class tipline(commands.Cog):
         color = discord.Color.green()
 
         # Log Command
-        commandlog = self.bot.get_channel(1294458506099032164)
+        commandlog = self.bot.get_channel()
             
         embed2 = discord.Embed(
             title = f"{ctx.author}: /tipline",
